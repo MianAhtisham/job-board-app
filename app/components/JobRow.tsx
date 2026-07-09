@@ -3,23 +3,23 @@ import {Job} from "@/app/models/Job";
 import TimeAgo from "@/app/components/TimeAgo";
 import {faHeart} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import axios from "axios";
+// import axios from "axios";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 
 export default function JobRow({jobDoc}:{jobDoc:Job}) {
-  const [isWishlisted, setIsWishlisted] = useState(false);
+  // const [isWishlisted, setIsWishlisted] = useState(false);
 
-  useEffect(() => {
-    axios.get('/api/wishlist?jobId=' + jobDoc._id)
-      .then(res => setIsWishlisted(res.data.wishlisted))
-      .catch(() => {});
-  }, [jobDoc._id]);
+  // useEffect(() => {
+  //   axios.get('/api/wishlist?jobId=' + jobDoc._id)
+  //     .then(res => setIsWishlisted(res.data.wishlisted))
+  //     .catch(() => {});
+  // }, [jobDoc._id]);
 
   async function toggleWishlist() {
     try {
-      const res = await axios.post('/api/wishlist', {jobId: jobDoc._id});
-      setIsWishlisted(res.data.wishlisted);
+      // const res = await axios.post('/api/wishlist', {jobId: jobDoc._id});
+      // setIsWishlisted(res.data.wishlisted);
     } catch (err) {
       alert('Please log in to save jobs to your wishlist');
     }
@@ -33,7 +33,7 @@ export default function JobRow({jobDoc}:{jobDoc:Job}) {
           onClick={toggleWishlist}
         >
           <FontAwesomeIcon
-            className={`size-4 transition-colors ${isWishlisted ? 'text-red-500' : 'text-gray-300 hover:text-red-300'}`}
+            // className={`size-4 transition-colors ${isWishlisted ? 'text-red-500' : 'text-gray-300 hover:text-red-300'}`}
             icon={faHeart}
           />
         </div>
@@ -76,7 +76,7 @@ export default function JobRow({jobDoc}:{jobDoc:Job}) {
                     className="cursor-pointer hover:underline hover:text-red-700"
                       type="button"
                       onClick={async () => {
-                        await axios.delete('/api/jobs?id='+jobDoc._id);
+                        // await axios.delete('/api/jobs?id='+jobDoc._id);
                         window.location.reload();
 
                       }}>
