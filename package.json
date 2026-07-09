@@ -1,0 +1,39 @@
+{
+  "name": "job-board-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1081.0",
+    "@fortawesome/fontawesome-svg-core": "^7.3.0",
+    "@fortawesome/free-solid-svg-icons": "^7.3.0",
+    "@fortawesome/react-fontawesome": "^3.4.0",
+    "@radix-ui/themes": "^3.3.0",
+    "@workos-inc/authkit-nextjs": "^4.2.0",
+    "cloudinary": "^2.10.0",
+    "mongoose": "^9.7.4",
+    "next": "16.2.10",
+    "react": "19.2.4",
+    "react-country-state-city": "^1.1.13",
+    "react-dom": "19.2.4",
+    "uniqid": "^5.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/uniqid": "^5.3.4",
+    "autoprefixer": "^10.5.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10",
+    "postcss": "^8.5.16",
+    "tailwindcss": "^4.3.2",
+    "typescript": "^5"
+  }
+}

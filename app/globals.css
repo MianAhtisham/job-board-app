@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+body{
+    @apply text-gray-800;
+}
